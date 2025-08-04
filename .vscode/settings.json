@@ -1,0 +1,26 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "emmet.includeLanguages": {
+    "tailwindcss": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "css": "css",
+    "html": "html",
+    "javascript": "javascript",
+    "javascriptreact": "javascript"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]",
+    "(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^\"']*)(?:\"|')",
+    "(?:enter|leave)(?:From|To)?=\\s*(?:\"|'|{`)([^\"'`]*)(?:\"|'|`})",
+    ":\\s*?[\"'`]([^\"'`]*).*?[\"'`]"
+  ]
+}
