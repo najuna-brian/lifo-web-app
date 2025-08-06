@@ -14,8 +14,8 @@ const ContactSection = () => {
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Located in Wandegeya, Kampala. We'd love to hear from you! Reach out to us 
-                            to learn more about our mission or to get involved.
+                            Contact <strong>Laundry Impact Foundation</strong> located in Wandegeya, Kampala. 
+                            We'd love to hear from you! Reach out to us to learn more about our mission or to get involved.
                         </p>
                     </div>
 

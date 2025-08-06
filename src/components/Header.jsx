@@ -17,14 +17,18 @@ const Header = () => {
     return (
         <header className="bg-white shadow-md sticky top-0 z-50">
             <div className="container mx-auto">
-                <div className="flex justify-between items-center py-4">
+                <div className="flex justify-between items-center py-3 md:py-4">
                     {/* Logo and brand */}
                     <Link to="/" className="flex items-center space-x-3 group">
                         <img 
                             src="/logo/default.png" 
                             alt="Laundry Impact Foundation Logo" 
-                            className="h-12 w-auto object-contain"
+                            className="h-16 md:h-20 w-auto object-contain max-w-xs"
                         />
+                        <div className="hidden lg:block">
+                            <h1 className="text-lg font-bold text-neutral-800">Laundry Impact Foundation</h1>
+                            <p className="text-sm text-neutral-600">hope and dignity through laundry</p>
+                        </div>
                     </Link>
 
                     {/* Desktop Navigation */}

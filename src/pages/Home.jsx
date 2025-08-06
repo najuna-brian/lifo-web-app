@@ -10,6 +10,27 @@ const Home = () => {
         <div className="overflow-hidden">
             <HeroSection />
             
+            {/* Brand Showcase Section */}
+            <section className="py-8 bg-gradient-to-r from-primary-50 to-secondary-50 border-y border-primary-100">
+                <div className="container mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-center"
+                    >
+                        <div className="max-w-2xl mx-auto">
+                            <img 
+                                src="/logo/default.png" 
+                                alt="Laundry Impact Foundation - Giving Hope Through Laundry" 
+                                className="h-24 md:h-32 lg:h-40 w-auto object-contain mx-auto"
+                            />
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+            
             {/* Mission Section */}
             <section className="section">
                 <div className="container mx-auto">

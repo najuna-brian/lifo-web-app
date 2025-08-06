@@ -77,12 +77,16 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Brand and mission */}
                     <div className="lg:col-span-2">
-                        <div className="flex items-center space-x-3 mb-4">
+                        <div className="flex flex-col space-y-4 mb-6">
                             <img 
                                 src="/logo/default.png" 
                                 alt="Laundry Impact Foundation Logo" 
-                                className="h-16 w-auto object-contain brightness-0 invert"
+                                className="h-20 md:h-24 w-auto object-contain brightness-0 invert max-w-sm"
                             />
+                            <div>
+                                <h3 className="text-xl font-bold text-white">Laundry Impact Foundation</h3>
+                                <p className="text-neutral-400 text-sm">Giving Hope Through Laundry • Uganda</p>
+                            </div>
                         </div>
                         <p className="text-neutral-300 mb-6 max-w-md">
                             Providing free laundry services to hospitalized patients and redistributing clean 

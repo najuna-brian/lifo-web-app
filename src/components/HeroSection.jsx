@@ -101,13 +101,17 @@ const HeroSection = () => {
                         className="relative"
                     >
                         {/* LIFo Logo Display */}
-                        <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
-                            <div className="aspect-square bg-white rounded-xl flex items-center justify-center p-8">
+                        <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+                            <div className="aspect-[4/3] bg-white rounded-xl flex flex-col items-center justify-center p-6 md:p-8">
                                 <img 
                                     src="/logo/default.png" 
                                     alt="Laundry Impact Foundation - Giving Hope Through Laundry" 
-                                    className="w-full h-auto object-contain"
+                                    className="w-full h-auto object-contain max-h-full"
                                 />
+                                <div className="mt-4 text-center">
+                                    <h3 className="text-lg font-bold text-neutral-800">Laundry Impact Foundation</h3>
+                                    <p className="text-sm text-neutral-600">Kampala, Uganda</p>
+                                </div>
                             </div>
                             
                             {/* Floating cards */}
