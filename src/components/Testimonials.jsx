@@ -5,25 +5,25 @@ const Testimonials = () => {
     const testimonials = [
         {
             id: 1,
-            name: "Maria Santos",
-            role: "Hospital Patient",
-            content: "LIFo provided free laundry services when I was hospitalized for weeks. Having clean clothes restored my dignity during such a difficult time. I'm forever grateful.",
+            name: "Sarah Nakato",
+            role: "Patient at Mulago Hospital",
+            content: "When I was admitted to Mulago Hospital for surgery, LIFo volunteers came and washed my clothes for free. Having clean clothes helped me feel human again during recovery.",
             image: "👩‍⚕️",
             rating: 5
         },
         {
             id: 2,
-            name: "John Mukasa",
-            role: "Slum Community Member",
-            content: "The volunteers came to our community and distributed clean clothes to our families. My children can now go to school with dignity. LIFo is a blessing.",
-            image: "👨‍💼",
+            name: "Moses Kiggundu",
+            role: "Katanga Slum Resident",
+            content: "The LIFo team brought clean clothes to our community in Katanga. My family received shirts and dresses that were properly washed. Our children can go to school with dignity now.",
+            image: "👨‍👧‍�",
             rating: 5
         },
         {
             id: 3,
-            name: "Grace Namugga",
-            role: "Mother of Three",
-            content: "When my husband was in the hospital, LIFo not only washed his clothes for free but also gave us extra clothes for our children. They gave us hope.",
+            name: "Rose Nambi",
+            role: "Mother from Wandegeya",
+            content: "Najuna Brian and his team helped us when my husband was hospitalized. They not only provided free laundry services but also gave us clean clothes for our children. God bless LIFo.",
             image: "👩‍👧‍👦",
             rating: 5
         }

@@ -279,6 +279,115 @@ const DonationForm = () => {
                     <p className="text-sm text-neutral-600">Simply schedule, prepare your items, and we'll handle the rest</p>
                 </div>
             </div>
+
+            {/* Bank Donation Section */}
+            <div className="mt-16 p-8 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl border border-primary-200">
+                <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-4">Support Us Financially</h3>
+                    <p className="text-neutral-600 max-w-2xl mx-auto">
+                        Your monetary donations help us cover transportation costs, washing supplies, and operational expenses 
+                        to serve more patients at Mulago Hospital and families in Katanga slum.
+                    </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                    {/* Bank Details */}
+                    <div className="bg-white p-6 rounded-lg shadow-sm border">
+                        <h4 className="text-lg font-semibold text-neutral-900 mb-4 flex items-center">
+                            <svg className="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                            </svg>
+                            Bank Transfer Details
+                        </h4>
+                        <div className="space-y-3 text-sm">
+                            <div className="flex justify-between border-b pb-2">
+                                <span className="font-medium text-neutral-700">Bank Name:</span>
+                                <span className="text-neutral-900">Stanbic Bank Uganda</span>
+                            </div>
+                            <div className="flex justify-between border-b pb-2">
+                                <span className="font-medium text-neutral-700">Account Name:</span>
+                                <span className="text-neutral-900">Laundry Impact Foundation</span>
+                            </div>
+                            <div className="flex justify-between border-b pb-2">
+                                <span className="font-medium text-neutral-700">Account Number:</span>
+                                <span className="text-neutral-900 font-mono">9030018735664</span>
+                            </div>
+                            <div className="flex justify-between border-b pb-2">
+                                <span className="font-medium text-neutral-700">Swift Code:</span>
+                                <span className="text-neutral-900 font-mono">SBICUGKX</span>
+                            </div>
+                            <div className="flex justify-between">
+                                <span className="font-medium text-neutral-700">Currency:</span>
+                                <span className="text-neutral-900">UGX (Ugandan Shillings)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mobile Money */}
+                    <div className="bg-white p-6 rounded-lg shadow-sm border">
+                        <h4 className="text-lg font-semibold text-neutral-900 mb-4 flex items-center">
+                            <svg className="w-5 h-5 text-secondary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            Mobile Money
+                        </h4>
+                        <div className="space-y-4">
+                            <div className="p-4 bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-lg border border-yellow-200">
+                                <div className="flex items-center mb-2">
+                                    <span className="text-lg font-bold text-yellow-800">MTN Mobile Money</span>
+                                </div>
+                                <div className="text-sm space-y-1">
+                                    <div className="flex justify-between">
+                                        <span className="text-yellow-700">Number:</span>
+                                        <span className="font-mono text-yellow-900">+256749444377</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="text-yellow-700">Name:</span>
+                                        <span className="text-yellow-900">Najuna Brian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="p-4 bg-gradient-to-r from-red-50 to-red-100 rounded-lg border border-red-200">
+                                <div className="flex items-center mb-2">
+                                    <span className="text-lg font-bold text-red-800">Airtel Money</span>
+                                </div>
+                                <div className="text-sm space-y-1">
+                                    <div className="flex justify-between">
+                                        <span className="text-red-700">Number:</span>
+                                        <span className="font-mono text-red-900">+256749444377</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="text-red-700">Name:</span>
+                                        <span className="text-red-900">Najuna Brian</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                            <p className="text-xs text-blue-800">
+                                <strong>Note:</strong> After making a donation, please send a confirmation message to 
+                                <span className="font-mono"> +256749444377</span> with your name and amount donated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Contact Information */}
+                <div className="mt-8 text-center">
+                    <p className="text-sm text-neutral-600">
+                        For donation confirmations or questions, contact us at{' '}
+                        <a href="mailto:laundryimpact@gmail.com" className="text-primary-600 hover:text-primary-700 font-medium">
+                            laundryimpact@gmail.com
+                        </a>{' '}
+                        or WhatsApp{' '}
+                        <a href="https://wa.me/256749444377" className="text-primary-600 hover:text-primary-700 font-medium">
+                            +256749444377
+                        </a>
+                    </p>
+                </div>
+            </div>
         </div>
     );
 };

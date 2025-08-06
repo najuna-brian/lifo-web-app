@@ -25,7 +25,7 @@ const Header = () => {
                         </div>
                         <div>
                             <h1 className="text-xl font-bold text-gradient">LIFo</h1>
-                            <p className="text-xs text-neutral-600 hidden sm:block">Laundry Impact Foundation</p>
+                            <p className="text-xs text-neutral-600 hidden sm:block">Laundry Impact Foundation - Uganda</p>
                         </div>
                     </Link>
 
