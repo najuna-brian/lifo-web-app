@@ -25,9 +25,9 @@ const Header = () => {
                             alt="Laundry Impact Foundation Logo" 
                             className="h-16 md:h-20 w-auto object-contain max-w-xs"
                         />
-                        <div className="hidden lg:block">
-                            <h1 className="text-lg font-bold text-neutral-800">Laundry Impact Foundation</h1>
-                            <p className="text-sm text-neutral-600">hope and dignity through laundry</p>
+                        <div className="block">
+                            <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-neutral-800">Laundry Impact Foundation</h1>
+                            <p className="text-xs sm:text-xs md:text-sm text-neutral-600">hope and dignity through laundry</p>
                         </div>
                     </Link>
 
