@@ -78,13 +78,11 @@ const Footer = () => {
                     {/* Brand and mission */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center space-x-3 mb-4">
-                            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">L</span>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-white">LIFo</h3>
-                                <p className="text-neutral-400 text-sm">Laundry Impact Foundation</p>
-                            </div>
+                            <img 
+                                src="/logo/default.png" 
+                                alt="Laundry Impact Foundation Logo" 
+                                className="h-16 w-auto object-contain brightness-0 invert"
+                            />
                         </div>
                         <p className="text-neutral-300 mb-6 max-w-md">
                             Providing free laundry services to hospitalized patients and redistributing clean 

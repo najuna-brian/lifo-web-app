@@ -20,13 +20,11 @@ const Header = () => {
                 <div className="flex justify-between items-center py-4">
                     {/* Logo and brand */}
                     <Link to="/" className="flex items-center space-x-3 group">
-                        <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-xl">L</span>
-                        </div>
-                        <div>
-                            <h1 className="text-xl font-bold text-gradient">LIFo</h1>
-                            <p className="text-xs text-neutral-600 hidden sm:block">Laundry Impact Foundation - Uganda</p>
-                        </div>
+                        <img 
+                            src="/logo/default.png" 
+                            alt="Laundry Impact Foundation Logo" 
+                            className="h-12 w-auto object-contain"
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}
