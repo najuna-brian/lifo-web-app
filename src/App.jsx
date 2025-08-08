@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Donate from './pages/Donate';
 import Volunteer from './pages/Volunteer';
+import Impact from './pages/Impact';
 import Admin from './pages/Admin';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/impact" element={<Impact />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>
         </main>

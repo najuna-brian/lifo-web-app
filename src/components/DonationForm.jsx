@@ -309,15 +309,15 @@ const DonationForm = () => {
                         <div className="space-y-3 text-sm">
                             <div className="flex justify-between border-b pb-2">
                                 <span className="font-medium text-neutral-700">Bank Name:</span>
-                                <span className="text-neutral-900">Stanbic Bank Uganda</span>
+                                <span className="text-neutral-900">Equity Bank Uganda</span>
                             </div>
                             <div className="flex justify-between border-b pb-2">
                                 <span className="font-medium text-neutral-700">Account Name:</span>
-                                <span className="text-neutral-900">Laundry Impact Foundation</span>
+                                <span className="text-neutral-900">NAJUNA BRIAN</span>
                             </div>
                             <div className="flex justify-between border-b pb-2">
                                 <span className="font-medium text-neutral-700">Account Number:</span>
-                                <span className="text-neutral-900 font-mono">9030018735664</span>
+                                <span className="text-neutral-900 font-mono">1044103465454</span>
                             </div>
                             <div className="flex justify-between border-b pb-2">
                                 <span className="font-medium text-neutral-700">Swift Code:</span>

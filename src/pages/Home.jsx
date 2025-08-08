@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import Testimonials from '../components/Testimonials';
 import Stats from '../components/Stats';
+import ImpactGrid from '../components/ImpactGrid';
 
 const Home = () => {
     return (
@@ -97,6 +98,48 @@ const Home = () => {
             </section>
 
             <Stats />
+
+            {/* Featured Impact Section */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12"
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+                            See Our <span className="text-gradient">Impact</span>
+                        </h2>
+                        <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+                            Every donation makes a difference. See how we're restoring dignity through clean clothing 
+                            in hospitals and communities across Uganda.
+                        </p>
+                    </motion.div>
+
+                    {/* Featured Photos Grid */}
+                    <ImpactGrid 
+                        limit={3} 
+                        featured={true} 
+                        showFilters={false}
+                        className="mb-8"
+                    />
+
+                    {/* View More Button */}
+                    <div className="text-center">
+                        <Link 
+                            to="/impact" 
+                            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center justify-center text-lg"
+                        >
+                            <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            View All Impact Stories
+                        </Link>
+                    </div>
+                </div>
+            </section>
 
             {/* How It Works Section */}
             <section className="section">
