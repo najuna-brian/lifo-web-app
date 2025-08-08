@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ImpactCard from './ImpactCard';
 import { getImpactPhotos } from '../lib/impactService';
+import { isConfigured } from '../lib/supabase';
 
 const ImpactGrid = ({ 
     limit = null, 
@@ -25,6 +26,11 @@ const ImpactGrid = ({
     ];
 
     const fetchPhotos = async () => {
+        if (!isConfigured()) {
+            setLoading(false);
+            return;
+        }
+
         setLoading(true);
         setError(null);
 

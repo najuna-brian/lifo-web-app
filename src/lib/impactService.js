@@ -1,7 +1,15 @@
-import { supabase } from './supabase'
+import { supabase, isConfigured } from './supabase'
 
 // Get all impact photos with optional filtering
 export const getImpactPhotos = async (filters = {}) => {
+  if (!isConfigured()) {
+    // Return mock data when Supabase is not configured
+    return { 
+      data: [], 
+      error: null 
+    }
+  }
+
   try {
     let query = supabase
       .from('impact_photos')
@@ -32,6 +40,13 @@ export const getImpactPhotos = async (filters = {}) => {
 
 // Add new impact photo
 export const addImpactPhoto = async (photoData) => {
+  if (!isConfigured()) {
+    return { 
+      data: null, 
+      error: { message: 'Supabase not configured. Please set up your environment variables.' } 
+    }
+  }
+
   try {
     const { data, error } = await supabase
       .from('impact_photos')
