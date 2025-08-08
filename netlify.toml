@@ -17,3 +17,7 @@
 [build.environment]
   # Node version for build
   NODE_VERSION = "18"
+  
+  # Supabase Configuration
+  VITE_SUPABASE_URL = "https://vjeddrxfjhmmiveqkakh.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqZWRkcnhmamhtbWl2ZXFrYWtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2NzI2OTksImV4cCI6MjA3MDI0ODY5OX0.JSK56fUkqPwcol4gp2Cm_pHQVEm022b5Mw5R7wlczbQ"
