@@ -25,10 +25,10 @@ const HeroSection = () => {
                             transition={{ duration: 0.6 }}
                         >
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                                Free Laundry{' '}
+                                Free Clothes & Laundry{' '}
                                 <span className="text-secondary-300">Services</span>
                                 <br />
-                                for Hospitalized Patients
+                                for Hospitalized Patients & People living in Slums
                             </h1>
                         </motion.div>
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl"
                         >
-                            We provide free laundry services to hospitalized patients and redistribute clean clothes 
+                            We provide free laundry services to hospitalized patients, Collect and redistribute clean clothes
                             to those who need them most in hospitals and slums. Your support helps restore dignity.
                         </motion.p>
 

@@ -127,7 +127,9 @@ const Home = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V7a2 2 0 012-2h4a2 2 0 012 2v0M8 7v10a2 2 0 002 2h4a2 2 0 002-2V7M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2" />
                                     </svg>
                                 ),
-                                color: "primary"
+                                color: "primary",
+                                link: "https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20pickup%20for%20clothing%20donations%20for%20LIFO",
+                                isExternal: true
                             },
                             {
                                 step: "02", 
@@ -138,7 +140,9 @@ const Home = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
                                     </svg>
                                 ),
-                                color: "secondary"
+                                color: "secondary",
+                                link: "https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20LIFO%27s%20collection%20process",
+                                isExternal: true
                             },
                             {
                                 step: "03",
@@ -149,43 +153,57 @@ const Home = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                                     </svg>
                                 ),
-                                color: "success"
+                                color: "success",
+                                link: "/volunteer",
+                                isExternal: false
                             }
-                        ].map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="text-center group relative"
-                            >
-                                {/* Step number */}
-                                <div className="text-6xl font-bold text-neutral-200 mb-4 group-hover:text-neutral-300 transition-colors">
-                                    {item.step}
-                                </div>
-                                
-                                {/* Icon */}
-                                <div className={`w-16 h-16 bg-${item.color}-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                    <div className={`text-${item.color}-600`}>
-                                        {item.icon}
-                                    </div>
-                                </div>
-                                
-                                {/* Content */}
-                                <h3 className="text-xl font-bold text-neutral-900 mb-4">
-                                    {item.title}
-                                </h3>
-                                <p className="text-neutral-600 leading-relaxed">
-                                    {item.description}
-                                </p>
+                        ].map((item, index) => {
+                            const Component = item.isExternal ? 'a' : Link;
+                            const linkProps = item.isExternal 
+                                ? { href: item.link, target: "_blank", rel: "noopener noreferrer" }
+                                : { to: item.link };
 
-                                {/* Connector line */}
-                                {index < 2 && (
-                                    <div className="hidden md:block absolute top-20 left-full w-8 h-px bg-neutral-300 transform -translate-y-1/2"></div>
-                                )}
-                            </motion.div>
-                        ))}
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="text-center group relative"
+                                >
+                                    <Component
+                                        {...linkProps}
+                                        className="block hover:scale-105 transition-transform duration-300 cursor-pointer"
+                                    >
+                                        {/* Step number */}
+                                        <div className="text-6xl font-bold text-neutral-200 mb-4 group-hover:text-neutral-300 transition-colors">
+                                            {item.step}
+                                        </div>
+                                        
+                                        {/* Icon */}
+                                        <div className={`w-16 h-16 bg-${item.color}-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                                            <div className={`text-${item.color}-600`}>
+                                                {item.icon}
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Content */}
+                                        <h3 className="text-xl font-bold text-neutral-900 mb-4">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-neutral-600 leading-relaxed">
+                                            {item.description}
+                                        </p>
+                                    </Component>
+
+                                    {/* Connector line */}
+                                    {index < 2 && (
+                                        <div className="hidden md:block absolute top-20 left-full w-8 h-px bg-neutral-300 transform -translate-y-1/2"></div>
+                                    )}
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -205,21 +223,25 @@ const Home = () => {
                             Ready to Make a <span className="text-secondary-300">Difference?</span>
                         </h2>
                         <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                            Join our mission to provide free laundry services to hospitalized patients and redistribute clothes to those in slums. 
-                            Every donation and volunteer hour creates lasting impact.
+                            Join our mission to restore dignity through clean clothing. Every donation matters.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link to="/donate" className="bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center justify-center text-lg">
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20pickup%20for%20clothing%20donations%20for%20LIFO" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center justify-center text-lg"
+                            >
                                 <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V7a2 2 0 012-2h4a2 2 0 012 2v0M8 7v10a2 2 0 002 2h4a2 2 0 002-2V7M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2" />
                                 </svg>
-                                Donate Today
-                            </Link>
+                                Schedule Pickup
+                            </a>
                             <Link to="/volunteer" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-primary-600 font-bold py-4 px-8 rounded-lg transition-all duration-200 inline-flex items-center justify-center text-lg">
                                 <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                                 </svg>
-                                Join Our Mission
+                                Volunteer With Us
                             </Link>
                         </div>
                     </motion.div>

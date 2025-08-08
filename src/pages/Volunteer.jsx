@@ -25,15 +25,15 @@ const Volunteer = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                                 <div className="text-3xl font-bold text-white mb-2">50+</div>
-                                <div className="text-orange-100">Active Volunteers</div>
+                                <div className="text-orange-100">Volunteers needed</div>
                             </div>
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                                 <div className="text-3xl font-bold text-white mb-2">200+</div>
                                 <div className="text-orange-100">Hours Monthly</div>
                             </div>
                             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                                <div className="text-3xl font-bold text-white mb-2">15</div>
-                                <div className="text-orange-100">Communities Served</div>
+                                <div className="text-3xl font-bold text-white mb-2">15+</div>
+                                <div className="text-orange-100">Hospitals & Communities</div>
                             </div>
                         </div>
                     </motion.div>
@@ -180,8 +180,8 @@ const Volunteer = () => {
                                     <span className="text-xl">👨‍💼</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-neutral-900">David Chen</h4>
-                                    <p className="text-sm text-neutral-600">Pickup Volunteer, 2 years</p>
+                                    <h4 className="font-semibold text-neutral-900">Kirabo Reagan</h4>
+                                    <p className="text-sm text-neutral-600">Volunteer 2025</p>
                                 </div>
                             </div>
                             <p className="text-neutral-600 italic">
@@ -195,8 +195,8 @@ const Volunteer = () => {
                                     <span className="text-xl">👩‍🎓</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-neutral-900">Sarah Johnson</h4>
-                                    <p className="text-sm text-neutral-600">Sorting Volunteer, 1 year</p>
+                                    <h4 className="font-semibold text-neutral-900">Tayebwa Noah</h4>
+                                    <p className="text-sm text-neutral-600">Mobilisation Volunteer, 2025</p>
                                 </div>
                             </div>
                             <p className="text-neutral-600 italic">

@@ -48,6 +48,7 @@
 
     <!-- Hidden forms for Netlify detection -->
     <form name="clothing-donation" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="clothing-donation" />
       <input type="text" name="name" />
       <input type="tel" name="phone" />
       <input type="email" name="email" />
@@ -56,17 +57,22 @@
       <input type="time" name="time" />
       <textarea name="notes"></textarea>
       <input type="file" name="image" />
+      <input name="bot-field" />
     </form>
 
     <form name="volunteer-registration" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="volunteer-registration" />
       <input type="text" name="name" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
+      <input type="text" name="address" />
       <input type="text" name="availability" />
       <input type="text" name="roles" />
       <textarea name="experience"></textarea>
       <textarea name="motivation"></textarea>
       <input type="text" name="emergencyContact" />
+      <input type="tel" name="emergencyPhone" />
+      <input name="bot-field" />
     </form>
 
     <script type="module" src="/src/main.jsx"></script>

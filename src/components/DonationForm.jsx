@@ -28,32 +28,39 @@ const DonationForm = () => {
         image: Yup.mixed().nullable(),
     });
 
-    const handleSubmit = (values, { resetForm }) => {
-        // Create form data for Netlify
-        const formData = new FormData();
-        formData.append('form-name', 'clothing-donation');
-        Object.keys(values).forEach(key => {
-            if (values[key] !== null && values[key] !== '') {
-                formData.append(key, values[key]);
-            }
-        });
+    const handleSubmit = async (values, { resetForm, setSubmitting }) => {
+        try {
+            // Create form data for Netlify
+            const formData = new FormData();
+            formData.append('form-name', 'clothing-donation');
+            
+            // Append all form fields
+            Object.keys(values).forEach(key => {
+                if (values[key] !== null && values[key] !== '') {
+                    formData.append(key, values[key]);
+                }
+            });
 
-        // Submit to Netlify
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-        })
-        .then(() => {
-            setSuccess(true);
-            resetForm();
-            // Auto-hide success message after 5 seconds
-            setTimeout(() => setSuccess(false), 5000);
-        })
-        .catch((error) => {
+            // Submit to Netlify
+            const response = await fetch('/', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                setSuccess(true);
+                resetForm();
+                // Auto-hide success message after 5 seconds
+                setTimeout(() => setSuccess(false), 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
             console.error('Form submission error:', error);
             alert('There was an error submitting your form. Please try again.');
-        });
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     return (

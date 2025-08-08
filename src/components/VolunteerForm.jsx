@@ -37,34 +37,40 @@ const VolunteerForm = () => {
                 .min(50, 'Please provide more detail (at least 50 characters)')
                 .required('Please tell us why you want to volunteer'),
         }),
-        onSubmit: (values, { resetForm }) => {
-            // Create form data for Netlify
-            const formData = new FormData();
-            formData.append('form-name', 'volunteer-registration');
-            Object.keys(values).forEach(key => {
-                if (Array.isArray(values[key])) {
-                    formData.append(key, values[key].join(', '));
-                } else if (values[key] !== null && values[key] !== '') {
-                    formData.append(key, values[key]);
-                }
-            });
+        onSubmit: async (values, { resetForm, setSubmitting }) => {
+            try {
+                // Create form data for Netlify
+                const formData = new FormData();
+                formData.append('form-name', 'volunteer-registration');
+                
+                Object.keys(values).forEach(key => {
+                    if (Array.isArray(values[key])) {
+                        formData.append(key, values[key].join(', '));
+                    } else if (values[key] !== null && values[key] !== '') {
+                        formData.append(key, values[key]);
+                    }
+                });
 
-            // Submit to Netlify
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
-            })
-            .then(() => {
-                setSuccess(true);
-                resetForm();
-                // Auto-hide success message after 5 seconds
-                setTimeout(() => setSuccess(false), 5000);
-            })
-            .catch((error) => {
+                // Submit to Netlify
+                const response = await fetch('/', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    setSuccess(true);
+                    resetForm();
+                    // Auto-hide success message after 5 seconds
+                    setTimeout(() => setSuccess(false), 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
                 console.error('Form submission error:', error);
                 alert('There was an error submitting your form. Please try again.');
-            });
+            } finally {
+                setSubmitting(false);
+            }
         },
     });
 

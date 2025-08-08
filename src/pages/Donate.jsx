@@ -24,7 +24,12 @@ const Donate = () => {
                         
                         {/* Quick facts */}
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 max-w-6xl mx-auto">
-                            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20donate%20clothes%20for%20your%20LIFO%20mission" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                            >
                                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -32,8 +37,13 @@ const Donate = () => {
                                 </div>
                                 <h3 className="text-lg font-semibold text-white mb-2">Clothes Donation</h3>
                                 <p className="text-blue-100 text-sm">Free pickup service</p>
-                            </div>
-                            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
+                            </a>
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20provide%20financial%20support%20for%20your%20LIFO%20mission" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                            >
                                 <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
@@ -41,8 +51,13 @@ const Donate = () => {
                                 </div>
                                 <h3 className="text-lg font-semibold text-white mb-2">Financial Support</h3>
                                 <p className="text-blue-100 text-sm">Fund services & supplies</p>
-                            </div>
-                            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
+                            </a>
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20donate%20equipment%20for%20your%20LIFO%20mission" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                            >
                                 <div className="w-12 h-12 bg-blue-300 rounded-lg flex items-center justify-center mx-auto mb-4">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -50,8 +65,13 @@ const Donate = () => {
                                 </div>
                                 <h3 className="text-lg font-semibold text-white mb-2">Equipment</h3>
                                 <p className="text-blue-100 text-sm">Washing & ironing machines</p>
-                            </div>
-                            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
+                            </a>
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20help%20with%20vehicle%20support%20for%20your%20LIFO%20mission" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                            >
                                 <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20" />
@@ -59,7 +79,7 @@ const Donate = () => {
                                 </div>
                                 <h3 className="text-lg font-semibold text-white mb-2">Vehicles</h3>
                                 <p className="text-blue-100 text-sm">Transport & delivery</p>
-                            </div>
+                            </a>
                         </div>
                     </motion.div>
                 </div>
@@ -91,9 +111,14 @@ const Donate = () => {
                             <p className="text-gray-600 mb-4">
                                 Donate clean, gently used clothing that we'll redistribute to patients and families in need.
                             </p>
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full">
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20pickup%20for%20clothing%20donations%20for%20LIFO" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full inline-block text-center"
+                            >
                                 Schedule Pickup
-                            </button>
+                            </a>
                         </div>
 
                         <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300 text-center">
@@ -106,9 +131,14 @@ const Donate = () => {
                             <p className="text-gray-600 mb-4">
                                 Help fund our operations, detergents, utilities, and maintenance of our laundry services.
                             </p>
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full">
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20provide%20financial%20support%20to%20fund%20LIFO%20operations" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full inline-block text-center"
+                            >
                                 Donate Funds
-                            </button>
+                            </a>
                         </div>
 
                         <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300 text-center">
@@ -121,9 +151,14 @@ const Donate = () => {
                             <p className="text-gray-600 mb-4">
                                 Donate washing machines, ironing equipment, or other laundry-related appliances.
                             </p>
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full">
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20donate%20laundry%20equipment%20to%20LIFO" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full inline-block text-center"
+                            >
                                 Contact Us
-                            </button>
+                            </a>
                         </div>
 
                         <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300 text-center">
@@ -136,9 +171,14 @@ const Donate = () => {
                             <p className="text-gray-600 mb-4">
                                 Help with transportation by donating vehicles or fuel for our pickup and delivery services.
                             </p>
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full">
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20help%20with%20vehicle%20support%20for%20LIFO%20transportation%20needs" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full inline-block text-center"
+                            >
                                 Get in Touch
-                            </button>
+                            </a>
                         </div>
 
                         <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300 text-center">
@@ -151,9 +191,14 @@ const Donate = () => {
                             <p className="text-gray-600 mb-4">
                                 Donate detergents, fabric softeners, and other cleaning supplies for our laundry operations.
                             </p>
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full">
+                            <a 
+                                href="https://wa.me/256749444377?text=Hello%2C%20I%20would%20like%20to%20donate%20laundry%20supplies%20to%20LIFO" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 w-full inline-block text-center"
+                            >
                                 Donate Supplies
-                            </button>
+                            </a>
                         </div>
 
                         <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300 text-center">
